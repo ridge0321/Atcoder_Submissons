@@ -1,9 +1,8 @@
 N = int(input())
+ans = []
+for i in reversed(range(10)):
+    ans.append((N // (2**i)) % 2)
 
-bit_n = bin(N)[2:]
-
-front_0_num = 10 - len(str(bit_n))
-
-for i in range(front_0_num):
-    print(0, end="")
-print(bit_n)
+for a in ans:
+    print(str(a), end="")
+print("")
